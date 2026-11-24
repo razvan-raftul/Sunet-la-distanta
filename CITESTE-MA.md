@@ -15,3 +15,9 @@ Addon NVDA (2026.1 și mai nou; Răzvan are 2026.3, cu Remote-ul inclus în NVDA
 ## De urmărit
 - Netestat pe Windows: posibile erori în declarațiile COM din captura.py (comtypes). Jurnalul NVDA arată „Sunet la distanță: …”.
 - Serverul public al Remote-ului s-ar putea să nu lase atâta sunet; varianta de rezervă e un server propriu.
+
+
+## Actualizare automată (24 nov. 2026, cerut de Răzvan)
+- Depozitul public github.com/razvan-raftul/Sunet-la-distanta (codul în addon/, workflow în .github/workflows/build.yml). Fiecare push pe main face addonul, cu versiunea 0.3.<numărul build-ului>, și îl pune în release-ul „latest” cu version.txt.
+- actualizare.py: la 20 de secunde după pornirea NVDA citește version.txt; dacă e mai nouă, descarcă și instalează. NVDA spune doar procentul din 10 în 10, cu bipurile de progres, apoi repornește.
+- Codul de lucru e în depozit; modificările se urcă cu git push din sesiune.
